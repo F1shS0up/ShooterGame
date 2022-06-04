@@ -1,10 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework.Input;
 
-namespace ShooterGame.Scripts
+
+static class SpriteSheetManager
 {
-    internal class SpriteSheetManager
+    public static List<SpriteSheet> spriteSheets = new List<SpriteSheet>();
+    public static void Update(GameTime gameTime)
     {
+        foreach (var spriteSheet in spriteSheets)
+        {
+            spriteSheet.Update(gameTime);
+        }
     }
+
+
 }
