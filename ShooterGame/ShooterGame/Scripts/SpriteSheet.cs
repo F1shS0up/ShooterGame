@@ -12,10 +12,10 @@ class SpriteSheet
     private int currentSprite;
     private string currentAnim;
     private int blockWidth, blockHeight; //Block that will nbe animating
-    private int sizeWidth, sizeHeight, originWidth, originHeight;// the size and origin for collision
+    public int sizeWidth, sizeHeight, originWidth, originHeight;// the size and origin for collision
     private Texture2D texture;
     float time;
-    private Vector2 position;
+    
 
     public SpriteSheet(Dictionary<string, (int, int, int)> pKeys, Texture2D pTexture,Vector2 startPosition ,int pBlockWidth, int pBlockHeight, int pSizeWidth = 0, int pSizeHeight = 0, int pOriginWidth = 0, int pOriginHeight = 0)
     {
@@ -35,7 +35,7 @@ class SpriteSheet
 
         time = 0;
 
-        position = startPosition;
+       
 
         texture = pTexture;
         SetCurrentAnimaton("null");
@@ -67,7 +67,7 @@ class SpriteSheet
 
         }
     }
-    public void Draw(SpriteBatch spriteBatch)
+    public void Draw(SpriteBatch spriteBatch, Vector2 position)
     {
         Rectangle x = new Rectangle(blockWidth * (currentSprite - 1), 0, blockWidth, blockHeight);
         spriteBatch.Draw(texture, position, x, Color.White);

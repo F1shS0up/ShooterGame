@@ -25,3 +25,21 @@
 /processorParam:TextureFormat=Color
 /build:Player-Sheet.png
 
+#begin TestBlocks.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:TestBlocks.png
+
+#begin TestBlocks.tsx
+/copy:TestBlocks.tsx
+
+#begin testMap01.tmx
+/copy:testMap01.tmx
+

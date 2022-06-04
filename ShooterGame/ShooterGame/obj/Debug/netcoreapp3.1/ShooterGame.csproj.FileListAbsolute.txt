@@ -28,3 +28,6 @@ C:\Users\valer\Documents\MonogameProjects\GitHub\ShooterGame\ShooterGame\Shooter
 C:\Users\valer\Documents\MonogameProjects\GitHub\ShooterGame\ShooterGame\ShooterGame\obj\Debug\netcoreapp3.1\ShooterGame.dll
 C:\Users\valer\Documents\MonogameProjects\GitHub\ShooterGame\ShooterGame\ShooterGame\obj\Debug\netcoreapp3.1\ShooterGame.pdb
 C:\Users\valer\Documents\MonogameProjects\GitHub\ShooterGame\ShooterGame\ShooterGame\obj\Debug\netcoreapp3.1\ShooterGame.genruntimeconfig.cache
+C:\Users\valer\Documents\MonogameProjects\GitHub\ShooterGame\ShooterGame\ShooterGame\bin\Debug\netcoreapp3.1\Content\TestBlocks.tsx
+C:\Users\valer\Documents\MonogameProjects\GitHub\ShooterGame\ShooterGame\ShooterGame\bin\Debug\netcoreapp3.1\Content\TestBlocks.xnb
+C:\Users\valer\Documents\MonogameProjects\GitHub\ShooterGame\ShooterGame\ShooterGame\bin\Debug\netcoreapp3.1\Content\testMap01.tmx

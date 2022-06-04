@@ -5,8 +5,10 @@
   <Config />
   <SourceFiles>
     <File>C:/Users/valer/Documents/MonogameProjects/GitHub/ShooterGame/ShooterGame/ShooterGame/Content/Player-Sheet.png</File>
+    <File>C:/Users/valer/Documents/MonogameProjects/GitHub/ShooterGame/ShooterGame/ShooterGame/Content/TestBlocks.png</File>
   </SourceFiles>
   <DestFiles>
+    <File xsi:nil="true" />
     <File xsi:nil="true" />
   </DestFiles>
 </SourceFileCollection>

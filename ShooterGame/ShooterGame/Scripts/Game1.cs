@@ -3,14 +3,18 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System.Collections.Generic;
 
+using TiledSharp;
+
 namespace ShooterGame
 {
     public class Game1 : Game
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch spriteBatch;
+        
+       TileMapManager tileMapManager;
 
-        SpriteSheet player;
+        Player player;
 
         Vector2 scale;
 
@@ -43,10 +47,13 @@ namespace ShooterGame
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            player = new SpriteSheet(new Dictionary<string, (int, int, int)> { { "null", (0, 0, 0) }, { "default", (1, 4,100) } }, 
+            SpriteSheet playerSPRT = new SpriteSheet(new Dictionary<string, (int, int, int)> { { "null", (0, 0, 0) }, { "default", (1, 4,100) } }, 
                 Content.Load<Texture2D>("Player-Sheet"), 
                 Vector2.Zero, 64, 64);
-            player.SetCurrentAnimaton("default");
+            playerSPRT.SetCurrentAnimaton("default");
+            player = new Player(new Object(playerSPRT, Vector2.Zero));
+            TmxMap map = new TmxMap("Content/testMap01.tmx");
+            tileMapManager = new TileMapManager(map, Content.Load<Texture2D>("TestBlocks"), 16 / map.TileWidth, map.TileWidth, map.TileHeight);
             // TODO: use this.Content to load your game content here
         }
         
@@ -56,7 +63,7 @@ namespace ShooterGame
                 Exit();
             SpriteSheetManager.Update(gameTime);
             // TODO: Add your update logic here
-
+          
             base.Update(gameTime);
         }
 
@@ -78,7 +85,7 @@ namespace ShooterGame
             GraphicsDevice.SetRenderTarget(changing);
             GraphicsDevice.Clear(Color.Transparent);
             spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointClamp);
-            player.Draw(spriteBatch);
+            player.obj.Draw(spriteBatch);
             spriteBatch.End();
             GraphicsDevice.SetRenderTarget(null);
         }
@@ -87,8 +94,8 @@ namespace ShooterGame
             GraphicsDevice.SetRenderTarget(nonChanging);
             GraphicsDevice.Clear(Color.LightBlue);
             spriteBatch.Begin(SpriteSortMode.Deferred, null, SamplerState.PointClamp);
-           
-            spriteBatch.End();
+            tileMapManager.Draw(spriteBatch);
+           spriteBatch.End();
             GraphicsDevice.SetRenderTarget(null);
         }
     }
