@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "QFoevuuIDBC5T9+xspajy8I1j/mcmJPIwg2DbKJ+3rRieCSm95f5t3rnertaqvs5Q1Ji+gT0Eovgdya0YBzJHQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\valer\\Documents\\MonogameProjects\\GitHub\\ShooterGame\\ShooterGame\\ShooterGame\\ShooterGame.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\valer\\.nuget\\packages\\monogame.content.builder.task\\3.8.0.1641\\monogame.content.builder.task.3.8.0.1641.nupkg.sha512",
+    "C:\\Users\\valer\\.nuget\\packages\\monogame.framework.desktopgl\\3.8.0.1641\\monogame.framework.desktopgl.3.8.0.1641.nupkg.sha512"
+  ],
+  "logs": []
+}
